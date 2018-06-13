@@ -1,0 +1,12 @@
+@import '~bootstrap/dist/css/bootstrap.css';
+
+@import 'loader';
+
+body {
+  background-color: #eee;
+  color: #444;
+}
+
+table tr th {
+  cursor: pointer;
+}

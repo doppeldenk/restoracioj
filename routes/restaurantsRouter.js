@@ -10,6 +10,7 @@ const {
 } = require('../controllers/restaurantsController');
 
 router.post('/', create);
+router.get('/:id', read);
 router.get('/', read);
 router.patch('/:id', update);
 router.delete('/:id', del);

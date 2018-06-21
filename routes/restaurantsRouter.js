@@ -7,10 +7,12 @@ const {
   read,
   update,
   del,
+  getCompetitors,
 } = require('../controllers/restaurantsController');
 
 router.post('/', create);
 router.get('/:id', read);
+router.get('/:id/competitors', getCompetitors);
 router.get('/', read);
 router.patch('/:id', update);
 router.delete('/:id', del);

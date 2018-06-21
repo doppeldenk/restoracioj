@@ -1,8 +1,9 @@
 const handleError = (error, ctx) => {
   console.log(error);
-  ctx.response.status = 500;
+  const { message, statusCode } = error;
+  ctx.response.status = statusCode || 500;
   ctx.body = {
-    message: error.message || 'Internal server error.',
+    message: message || 'Internal server error',
   };
 };
 

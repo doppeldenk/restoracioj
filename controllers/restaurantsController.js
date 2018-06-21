@@ -1,5 +1,4 @@
 const { handleError } = require('../utils/errorHandler');
-const RestaurantModel = require('../models/Restaurant');
 const RestaurantsService = require('../services/restaurants');
 
 const create = async (ctx) => {
@@ -19,10 +18,28 @@ const create = async (ctx) => {
 };
 
 const read = async (ctx) => {
-  const { query: filters } = ctx;
+  let {
+    query : filters,
+    params: { id },
+  } = ctx;
+
+  if (id) {
+    filters = { id };
+  }
 
   try {
     const response = await RestaurantsService.read(filters);
+    ctx.body = response;
+  } catch (err) {
+    handleError(err, ctx);
+  }
+};
+
+const getCompetitors = async (ctx) => {
+  const { params: { id } } = ctx;
+
+  try {
+    const response = await RestaurantsService.getCompetitors(id);
     ctx.body = response;
   } catch (err) {
     handleError(err, ctx);
@@ -36,7 +53,7 @@ const update = async (ctx) => {
   } = ctx;
 
   try {
-    const response = await RestaurantModel.update(fields, id);
+    const response = await RestaurantsService.update(id, fields);
     ctx.body = response;
   } catch (err) {
     handleError(err, ctx);
@@ -49,7 +66,7 @@ const del = async (ctx) => {
   } = ctx;
 
   try {
-    const response = await RestaurantModel.del(id);
+    const response = await RestaurantsService.del(id);
     ctx.status = 204;
     ctx.body = response;
   } catch (err) {
@@ -62,4 +79,5 @@ module.exports = {
   read,
   update,
   del,
+  getCompetitors,
 };

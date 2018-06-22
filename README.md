@@ -88,7 +88,14 @@ Project should be available at [http://localhost:3000](http://localhost:3001)
   }
 ]
 ```
-
+Note: you can use this same endpoint to search restaurants by name by calling:
+```
+GET http://localhost:3001/restaurants/?name=<find-similar-name>
+```
+or to search restaurants by category by calling
+```
+GET http://localhost:3001/restaurants/?categoryId=<categoryId>
+```
 
 ###### GET http://localhost:3001/restaurants/:id
 *Response example:*

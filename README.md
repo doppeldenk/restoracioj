@@ -12,7 +12,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing
 
-Install frontend dependencies
+Install dependencies
 
 ```
 npm install

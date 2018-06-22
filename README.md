@@ -120,7 +120,7 @@ npm test
 *Request body example:*
 ```
 {
-	"name": "Marrero's wraps"
+  "name": "Marrero's wraps"
 }
 ```
 

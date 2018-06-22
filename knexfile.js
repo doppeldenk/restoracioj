@@ -13,4 +13,18 @@ module.exports = {
     },
     useNullAsDefault: true,
   },
+  test: {
+    client: 'pg',
+    connection: {
+      host: 'ec2-54-83-0-158.compute-1.amazonaws.com',
+      user: 'wzudddcncowfcb',
+      password: '1868af2401f2dd6e567804f8be526e11df428ce1d4a2a246c1e4cd50f017f63e',
+      database: 'dbfi3ahet580ui',
+      ssl: true,
+    },
+    migrations: {
+      directory: './migrations',
+    },
+    useNullAsDefault: true,
+  },
 };

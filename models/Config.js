@@ -18,26 +18,6 @@ const Config = {
       });
   },
 
-  getAccessToken: () => (
-    knex(CONFIG)
-      .first('value as accesToken')
-      .where('key', 'access_token')
-      .then(row => row)
-  ),
-
-  createAccessToken: (token) => (
-    knex(CONFIG)
-      .where('key', 'access_token')
-      .del()
-      .then(() => (
-        knex(CONFIG)
-          .insert({
-            key: 'access_token',
-            value: token,
-          })
-      ))
-  ),
-
 };
 
 module.exports = Config;

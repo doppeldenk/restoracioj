@@ -1,6 +1,6 @@
 const RestaurantModel = require('../../models/Restaurant');
 
-module.exports = async (filters) => {
+module.exports = async (filters = {}) => {
   const { id, name, categoryId } = filters;
   let response;
 

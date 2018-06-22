@@ -32,12 +32,6 @@ npm start
 
 Project should be available at [http://localhost:3000](http://localhost:3001)
 
-## Running the tests
-
-```
-npm test
-```
-
 ## Endpoints available
 
 ###### POST http://localhost:3001/restaurants
@@ -133,6 +127,13 @@ npm test
 
 ###### DELETE http://localhost:3001/restaurants/:id
 *Response: 204 No Content*
+
+
+## Running the tests
+
+```
+npm test
+```
 
 ## Authors
 

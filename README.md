@@ -49,6 +49,7 @@ npm test
 }
 ```
 
+
 ###### GET http://localhost:3001/restaurants
 *Response example:*
 ```
@@ -88,6 +89,7 @@ npm test
 ]
 ```
 
+
 ###### GET http://localhost:3001/restaurants/:id
 *Response example:*
 ```
@@ -109,8 +111,10 @@ npm test
 }
 ```
 
+
 ###### GET http://localhost:3001/restaurants/:id/competitors
 *Response is formatted like PedidosYa API's response*
+
 
 ###### PATCH http://localhost:3001/restaurants/:id
 *Request body example:*
@@ -119,6 +123,7 @@ npm test
 	"name": "Marrero's wraps"
 }
 ```
+
 
 ###### DELETE http://localhost:3001/restaurants/:id
 *Response: 204 No Content*
